@@ -1,4 +1,4 @@
-package by.instinctools.textanalizer.workWithFile;
+package by.instinctools.textanalyzer.workWithFile;
 
 import java.util.Arrays;
 
