@@ -1,6 +1,8 @@
 package by.instinctools.textanalizer;
 
-import by.instinctools.textanalizer.workWithFile.AnalyzeFile;
+import java.util.Arrays;
+
+import by.instinctools.textanalizer.workWithFile.FileAnalyze;
 import by.instinctools.textanalizer.workWithFile.ReadFromFile;
 
 /**
@@ -11,9 +13,9 @@ public class RunAnalize {
 	 * Point to enter the application for reading and analysis txt-file.
 	 */
 	public static void main(String[] args) throws Exception {
-		String textString = ReadFromFile.readFile("d:/text.txt");
+		String textString = ReadFromFile.readFile("text.txt");
 		System.out.println("Text from file: " + textString);
-		System.out.println(AnalyzeFile.bracketChecker(textString));
-		AnalyzeFile.repeatChecker(textString);
+		System.out.println(FileAnalyze.bracketChecker(textString));
+		System.out.println("Top 10 words in text: " +  Arrays.toString(FileAnalyze.repeatChecker(textString)));
 	}
 }
