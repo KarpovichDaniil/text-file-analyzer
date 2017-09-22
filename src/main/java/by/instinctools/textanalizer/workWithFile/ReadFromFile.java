@@ -4,21 +4,21 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 /**
- * Class for reading txt-file
+ * Class for reading of txt-file.
  */
 public class ReadFromFile {
-	private static String fileString;
+	private static String textString;
 
 	/**
-	 * Reading txt-file in string
+	 * Reading of txt-file in string.
 	 * 
 	 * @param fileName
-	 *            Name and Path to txt-file for read
-	 * @return String from file reading
+	 *            The Name and path to txt-file for reading.
+	 * @return Readed string.
 	 * @throws Exception
 	 */
 	public static String readFile(String fileName) throws Exception {
-		fileString = new String(Files.readAllBytes(Paths.get(fileName)));
-		return fileString;
+		textString = new String(Files.readAllBytes(Paths.get(fileName)));
+		return textString;
 	}
 }
