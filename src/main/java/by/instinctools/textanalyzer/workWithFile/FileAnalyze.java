@@ -15,7 +15,8 @@ public class FileAnalyze {
 	 * 
 	 * @param textString
 	 *            Text string to analyze.
-	 * @return Top 10 must repeated words in the text.
+	 * @return 
+	 * 			  Top 10 must repeated words in the text.
 	 * @throws Exception 
 	 */
 	public static Object[] repeatChecker(String textString) throws Exception {

@@ -13,6 +13,5 @@ public class RunAnalyze {
 	 */
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(RunAnalyze.class, args);
-		
 	}
 }
