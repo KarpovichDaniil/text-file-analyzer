@@ -1,4 +1,4 @@
-package by.instinctools.textanalizer.workWithFile;
+package by.instinctools.textanalyzer.workWithFile;
 
 import java.util.Arrays;
 
@@ -16,7 +16,7 @@ public class FileAnalyze {
 	 * @param textString
 	 *            Text string to analyze.
 	 * @return 
-	 * @return 
+	 * 			  Top 10 must repeated words in the text.
 	 * @throws Exception 
 	 */
 	public static Object[] repeatChecker(String textString) throws Exception {
@@ -29,6 +29,12 @@ public class FileAnalyze {
 		        .collect(groupingBy(s -> s, counting()))
 		        .entrySet()
 		        .stream()
+		        .sorted(
+			            (s1, s2) -> {
+			                final int res = s2.getValue().compareTo(s1.getValue());
+			                return res == 0 ? s1.getKey().compareTo(s2.getKey()) : res;
+			            }
+			        )
 		        .limit(10)
 		        .toArray();
 		return result;
